@@ -9,4 +9,11 @@ function nextSequence() {
 
   // add randowmChosenColour into arrays
   gamePattern.push(randomChosenColour);
+
+  // use jquey to animate flash to the button
+  $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+
+  // play sound for button selected
+  var audio = new Audio("sounds/" + randomChosenColour  + ".mp3");
+  audio.play();
 }
