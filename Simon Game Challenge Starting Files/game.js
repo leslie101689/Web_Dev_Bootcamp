@@ -30,7 +30,7 @@ $(".btn").click(function() {
 
 function nextSequence() {
 
-  // initialize array for next level
+  // initialize user click array for next level
   userClickedPattern = [];
   level++;
 
@@ -88,6 +88,13 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over");
     }, 200);
 
-    $("#level-title").text("Game Over, Press any key to Restart")
+    $("#level-title").text("Game Over, Press any key to Restart");
+    startOver();
   }
+}
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
 }
