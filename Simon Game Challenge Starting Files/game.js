@@ -8,8 +8,10 @@ $(".btn").click(function() {
   var userChosenColour = $(this).attr("id");
 
   userClickedPattern.push(userChosenColour);
-
   // console.log(userClickedPattern);
+
+  playsound(userChosenColour);
+
 });
 
 function nextSequence() {
@@ -23,7 +25,11 @@ function nextSequence() {
   // use jquey to animate flash to the button
   $("#" + randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 
+  playsound(randomChosenColour);
+}
+
+function playsound(name) {
   // play sound for button selected
-  var audio = new Audio("sounds/" + randomChosenColour  + ".mp3");
+  var audio = new Audio("sounds/" + name  + ".mp3");
   audio.play();
 }
