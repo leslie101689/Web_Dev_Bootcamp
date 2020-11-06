@@ -11,6 +11,7 @@ $(".btn").click(function() {
   // console.log(userClickedPattern);
 
   playsound(userChosenColour);
+  animatePress(userChosenColour);
 
 });
 
@@ -32,4 +33,14 @@ function playsound(name) {
   // play sound for button selected
   var audio = new Audio("sounds/" + name  + ".mp3");
   audio.play();
+}
+
+function animatePress(currentColour) {
+  //
+  $("#" + currentColour).addClass("pressed");
+
+  // remove pressed class after 100 milliseconds
+  setTimeout(function() {
+    $("#" + currentColour).removeClass("pressed");
+  }, 100);
 }
