@@ -1,0 +1,14 @@
+{
+  "name": "weatherproject",
+  "version": "1.0.0",
+  "description": "Making GET Requests with the Node HTTPS Module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leslie Ng",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
