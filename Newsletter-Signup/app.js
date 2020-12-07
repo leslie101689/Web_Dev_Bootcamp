@@ -34,11 +34,11 @@ app.post("/",function(req, res) {
 
   const jsonData = JSON.stringify(data)
 
-  const url = "https://us2.api.mailchimp.com/3.0/lists/7c8cd24dd4";
+  const url = "https://us2.api.mailchimp.com/3.0/lists/";
 
   const options = {
     method:"POST",
-    auth:"leslie1:256da4b95f04579b7cb2279485df50a1-us2"
+    auth:""
   }
 
   const request = https.request(url, options, function(response) {
@@ -69,7 +69,7 @@ app.listen(process.env.PORT || 3000, function() {
 // '{"name":"","contact":{"company":"","address1":"","address2":"","city":"","state":"","zip":"","country":"","phone":""},"permission_reminder":"","use_archive_bar":false,"campaign_defaults":{"from_name":"","from_email":"","subject":"","language":""},"notify_on_subscribe":"","notify_on_unsubscribe":"","email_type_option":false,"visibility":"pub","double_optin":false,"marketing_permissions":false}'
 
 // API Key
-// 256da4b95f04579b7cb2279485df50a1-us2
+//
 
 // List
-// 7c8cd24dd4
+//

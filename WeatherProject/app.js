@@ -12,7 +12,7 @@ app.get("/", function(req,res) {
 
 app.post("/", function(req, res) {
   const query = req.body.cityName;
-  const apiKey = "5e6795f34c43a1af13a04d517c610b9c";
+  const apiKey = "";
   const units = "metric";
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=" + units + "&appid=" + apiKey;
   https.get(url, function(response) {
@@ -39,7 +39,7 @@ app.listen(3000, function() {
 });
 
 // const query = "London";
-// const apiKey = "5e6795f34c43a1af13a04d517c610b9c";
+// const apiKey = "";
 // const units = "metric";
 // const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&units=" + units + "&appid=" + apiKey;
 // https.get(url, function(response) {
